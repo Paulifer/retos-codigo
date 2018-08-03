@@ -1,16 +1,18 @@
-/*Dado un objeto como parámetro, contar la cantidad de propiedades que este contiene y retornarlo.
+/*Escribe una función llamada "addArrayProperty(obj, key, array)".
 
-Ejemplo:
+Dado un objeto, una clave y un array, "addArrayProperty" establece una nueva propiedad sobre el objeto en la clave dada, con su valor establecido en el array dado.
 
-const output = objectPropertiesCounter({ 'name': 'John', 'lastname': 'Doe' });
+Ejemplo de entrada:
 
-console.log(ouput); // -> 2
+var myObj = {};
+var myStr = 'myProperty';
+var myArray = [1, 3];
 
+addArrayProperty(myObj, myStr, myArray);
+console.log(myObj.myProperty); // --> [1, 3]
 */
 
-const objectPropertiesCounter = (obj) => {
-  let arr = {};
-    arr = Object.keys(obj).length;
-    return arr;
 
-};
+const addArrayProperty = (obj, key, arr)=> {
+  obj[key]=arr;
+}
